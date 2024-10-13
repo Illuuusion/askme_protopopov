@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create ask</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+      <style>
+         .my-navbar{
+            background: rgba(23, 23, 23, 0.89);
+            height: 100px;
+        }
+        .my-navbar-label{
+            margin-left: 220px;
+            color: snow;
+        }
+        .my-button{
+            color: black;
+            background: rgb(3, 76, 209);
+            height: 50px;
+            width: 70px;
+            border-radius: 10px;
+            border: rgb(5, 76, 209);
+            margin-top: 20px;
+        }
+        .my-button:hover{
+            color: white;
+        }
+        .my-log-and-settings{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .my-text-label{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            height: 400px;
+        }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg my-navbar">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <a class="navbar-brand my-navbar-label" href="index.html"><h1>AskProtopopov</h1></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 w-100" type="search" placeholder="Search your question" aria-label="Search">
+                </form>
+
+                    <div>
+                      <a href="login.html" class="my-log-and-settings">Log in</a>
+                      <a href="register.html" class="my-log-and-settings">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-3">
+        <div class="d-flex gap-3 align-items-center">
+            <h1>New Question</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+                <div class="input-group">
+                    <span class="input-group-text">Title</span>
+                    <textarea class="form-control" aria-label="Title"></textarea>
+                </div>
+                <div class="input-group my-text-label">
+                    <span class="input-group-text">Text</span>
+                    <textarea class="form-control" aria-label="Text"></textarea>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Tags</span>
+                    <textarea class="form-control" aria-label="Tags"></textarea>
+                </div>
+                <div class="d-flex2, 58, 168">
+                    <button class="my-button" type="submit">Ask</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <section class="mb-3">
+                    <h2>Popular Tags</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-primary">C++</li>
+                        <li class="list-group-item list-group-item-warning">Python</li>
+                        <li class="list-group-item list-group-item-success">VK Education</li>
+                        <li class="list-group-item list-group-item-danger">Bootstrap</li>
+                        <li class="list-group-item list-group-item-warning">Kotlin</li>
+                        <li class="list-group-item list-group-item-info">PostgreSQL</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Best members</h2>
+                    <div>
+                        <ul class="list-group list-group-flush list-group-horizontal-flush list-group-numbered">
+                            <li class="list-group-item"><a href="#">Member</a></li>
+                            <li class="list-group-item"><a href="#">Member</a></li>
+                            <li class="list-group-item"><a href="#">Member</a></li>
+                            <li class="list-group-item"><a href="#">Member</a></li>
+                            <li class="list-group-item"><a href="#">Member</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="../static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
