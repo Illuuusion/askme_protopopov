@@ -30,14 +30,18 @@
             font-size: 20px;
         }
         .my-image{
-            height: 228px;
+            height: auto;
             width: 228px;
             margin-bottom: 10px;
+            max-width: 100%;
         }
         .my-answer-form{
             margin-top: 20px;
             height: 100px;
             margin-bottom: 20px;
+        }
+        .my-textarea{
+            resize: none;
         }
       </style>
 </head>
@@ -91,8 +95,12 @@
                                     <div class="border mb-2" style="height: 100px">
                                         <img src="jpg.jpg" alt="Avatar" class="img-fluid">
                                     </div>
-                                    <input class="form-control" type="number" value="5" placeholder="Default input"
-                                        aria-label="default input example">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                      <label class="form-check-label" for="flexCheckChecked">
+                                        Correct answer!
+                                      </label>
+                                    </div>
 
                                 </div>
                                 <div class="col-9">
@@ -101,19 +109,6 @@
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk
                                         of the card's content.</p>
-
-                                    <div class="d-flex gap-5">
-                                        <a href="#" class="card-link">Answer (3)</a>
-                                        <div>
-
-                                            Tags:
-
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,8 +120,12 @@
                                     <div class="border mb-2" style="height: 100px">
                                         <img src="jpg.jpg" alt="Avatar" class="img-fluid">
                                     </div>
-                                    <input class="form-control" type="number" value="5" placeholder="Default input"
-                                        aria-label="default input example">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                      <label class="form-check-label" for="flexCheckChecked">
+                                        Correct answer!
+                                      </label>
+                                    </div>
 
                                 </div>
                                 <div class="col-9">
@@ -135,26 +134,13 @@
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk
                                         of the card's content.</p>
-
-                                    <div class="d-flex gap-5">
-                                        <a href="#" class="card-link">Answer (3)</a>
-                                        <div>
-
-                                            Tags:
-
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                            <a href="#" class="card-link">Another link</a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="input-group my-answer-form">
                         <span class="input-group-text">Your answer</span>
-                        <textarea class="form-control" aria-label="Your answer"></textarea>
+                        <textarea class="form-control my-textarea" aria-label="Your answer"></textarea>
                     </div>
                     <button class="my-button" type="submit">Answer</button>
                 </div>
