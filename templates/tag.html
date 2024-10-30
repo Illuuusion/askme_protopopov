@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block title %}
-    <h1>New Questions</h1>
-    <a href="{% url 'hot' %}">Hot Questions</a>
+    <h1>{{ tag.title }}</h1>
+    <a href="{% url 'hot' %}">New Questions</a>
 {% endblock %}
 
 {% block content %}
@@ -13,6 +13,6 @@
                         {% include 'layouts/question_card.html' %}
                     {% endfor %}
                 </div>
-                {% include 'layouts/pagination.html' %}
+                    {% include 'layouts/pagination.html' %}
             </div>
 {% endblock %}

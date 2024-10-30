@@ -1,13 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
+{%  load static %}
+
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create ask</title>
+    <title>AskProtopopov</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-      <style>
-         .my-navbar{
+    <style>
+        .my-navbar{
             background: rgba(23, 23, 23, 0.89);
             height: 100px;
         }
@@ -22,25 +24,26 @@
             width: 70px;
             border-radius: 10px;
             border: rgb(5, 76, 209);
-            margin-top: 20px;
         }
         .my-button:hover{
             color: white;
         }
-        .my-log-and-settings{
-            margin-right: 15px;
-            font-size: 20px;
-        }
-        .my-text-label{
+        .my-image{
+            width: 70px;
+            height: 70px;
             margin-top: 15px;
-            margin-bottom: 15px;
-            height: 400px;
-        }  
-         .my-textarea{
-            resize: none;
+            margin-right: 15px;
         }
-      </style>
+        .my-logout{
+            color: rgb(230, 3, 3);
+        }
+        .my-logout:hover{
+            color: rgb(113, 5, 1);
+        }
+    </style>
 </head>
+
+
 <body>
     <nav class="navbar navbar-expand-lg my-navbar">
         <div class="container-fluid">
@@ -57,40 +60,33 @@
                     <input class="form-control me-2 w-100" type="search" placeholder="Search your question" aria-label="Search">
                 </form>
 
+                <div class="d-flex2, 58, 168">
+                    <a href="{% url 'ask' %}"><button class="my-button" type="submit">Ask</button></a>
+                </div>
+                <div class="d-flex gap-3">
+                    <img src="{% static 'img/vk_logo.png' %}" alt="Avatar" class="my-image">
                     <div>
-                      <a href="{% url 'login' %}" class="my-log-and-settings">Log in</a>
-                      <a href="{% url 'register' %}" class="my-log-and-settings">Register</a>
+                        <div>
+                            <h5 style="color: white">Dr. Pepper</h5>
+                        </div>
+                            <a href="{% url 'settings' %}"><h5>Settings</h5></a>
+                            <a href="#" class="my-logout"><h5>Log out</h5></a>
                     </div>
                 </div>
             </div>
+        </div>
     </nav>
 
     <main class="container mt-3">
         <div class="d-flex gap-3 align-items-center">
-            <h1>New Question</h1>
+            {% block title %}
+            {% endblock %}
         </div>
 
-        <h5 style="color: red; margin-bottom: 50px">Error adding question</h5>
-
         <div class="row">
-            <div class="col-9">
-                <div class="input-group">
-                    <span class="input-group-text">Title</span>
-                    <textarea class="form-control my-textarea" aria-label="Title"></textarea>
-                </div>
-                <div class="input-group my-text-label">
-                    <span class="input-group-text">Text</span>
-                    <textarea class="form-control my-textarea" aria-label="Text"></textarea>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-text">Tags</span>
-                    <textarea class="form-control my-textarea" aria-label="Tags"></textarea>
-                </div>
-                <div class="d-flex2, 58, 168">
-                    <button class="my-button" type="submit">Ask</button>
-                </div>
-            </div>
-            <div class="col-3">
+            {% block content %}
+            {% endblock %}
+            <div class="col">
                 <section class="mb-3">
                     <h2>Popular Tags</h2>
                     <ul class="list-group list-group-flush">
@@ -118,7 +114,7 @@
             </div>
         </div>
     </main>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
