@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'askme_Protopopov'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,8 @@ WSGI_APPLICATION = 'askme_Protopopov.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-        'USER': 'myuserdb',
+        'NAME': 'askmedb',
+        'USER': 'myuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
